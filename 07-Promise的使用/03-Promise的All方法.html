@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  Promise.all([
+    new Promise((resolve, reject) => {
+      setTimeout(()=>{
+        resolve({name:'1',age:13})
+      },3000)
+    }),
+    new Promise((resolve, reject) => {
+      setTimeout(()=>{
+        resolve({name:'12',age:133})
+      },3000)
+    })
+  ]).then(results => {
+    //results[0]存放第一个结果
+    console.log(results[0]);
+    //results[1]存放第二个结果
+    console.log(results[1]);
+  })
+</script>
+</body>
+</html>

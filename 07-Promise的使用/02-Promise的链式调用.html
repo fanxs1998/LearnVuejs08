@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  // new Promise((resolve,reject)=>{
+  //   console.log('1')
+  //   setTimeout(()=>{
+  //     resolve('1a')
+  //   },1000)
+  // }).then((val)=>{
+  //   console.log('自己处理10代码');
+  //   return new Promise((resolve,reject)=>{
+  //     resolve(val+'2b')
+  //   })
+  // }).then((val)=>{
+  //   console.log('自己处理9代码');
+  //   console.log('收到的是'+val)
+  // })
+
+  new Promise((resolve,reject)=>{
+    console.log('1')
+    setTimeout(()=>{
+      resolve('1a')
+    },1000)
+  }).then((val)=>{
+    console.log('自己处理10代码');
+    return val+'2b'
+  }).then((val)=>{
+    console.log('自己处理9代码');
+    console.log('收到的是'+val)
+  })
+</script>
+</body>
+</html>
